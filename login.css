@@ -600,3 +600,86 @@ body::before {
         border: 2px solid currentColor;
     }
 }
+
+/* ==================== Forgot Password Page Styles ==================== */
+
+/* Info Box */
+.info-box {
+    display: none;
+    margin-top: 24px;
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary-color);
+    animation: slideDown 0.3s ease-out;
+}
+
+.info-box svg {
+    flex-shrink: 0;
+    color: var(--primary-color);
+    margin-right: 12px;
+}
+
+.info-box .info-content {
+    flex: 1;
+}
+
+.info-box p {
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-box ul li {
+    color: var(--text-secondary);
+    font-size: 13px;
+    padding: 4px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.info-box ul li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.info-box {
+    display: none;
+}
+
+.info-box svg,
+.info-box .info-content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Back to login link with icon */
+.signup-link svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments for forgot password */
+@media (max-width: 480px) {
+    .info-box {
+        padding: 12px;
+    }
+    
+    .info-box p {
+        font-size: 13px;
+    }
+    
+    .info-box ul li {
+        font-size: 12px;
+    }
+}
